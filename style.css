@@ -193,3 +193,62 @@ body {
   .profile-card { align-items: flex-start; }
   .nav-menu { grid-template-columns: 1fr; }
 }
+
+/* AIMS LAB LOGO */
+.hero-logo {
+  display: block;
+  width: min(100%, 760px);
+  height: auto;
+  margin: 0.35rem 0 1.5rem;
+  object-fit: contain;
+}
+
+/* PH.D. STUDENT DETAILS */
+.student-profile-card {
+  align-items: flex-start;
+}
+
+.student-profile-card .member-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.member-education {
+  margin-top: 0.55rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.member-education p {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+
+.member-education p:last-child {
+  margin-bottom: 0;
+}
+
+.member-education strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.65rem;
+}
+
+@media (max-width: 640px) {
+  .hero-logo {
+    margin-bottom: 1.1rem;
+  }
+
+  .student-profile-card {
+    flex-direction: column;
+  }
+}
+
