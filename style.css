@@ -194,13 +194,75 @@ body {
   .nav-menu { grid-template-columns: 1fr; }
 }
 
-/* AIMS LAB LOGO */
-.hero-logo {
-  display: block;
-  width: min(100%, 760px);
-  height: auto;
-  margin: 0.35rem 0 1.5rem;
+
+/* AIMS LAB HERO: circular seal beside the lab name */
+.hero-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 980px;
+}
+
+.hero-circle-logo {
+  width: clamp(155px, 19vw, 210px);
+  height: clamp(155px, 19vw, 210px);
+  flex: 0 0 auto;
   object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
+}
+
+.hero-brand-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.hero-brand-copy .eyebrow {
+  margin-bottom: 0.45rem;
+}
+
+.hero-brand-copy .page-title {
+  margin-bottom: 0.7rem;
+}
+
+.hero-brand-copy .institution {
+  margin-bottom: 0.9rem;
+}
+
+.hero-brand-copy .lead-text {
+  max-width: 700px;
+}
+
+@media (max-width: 720px) {
+  .hero-brand-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .hero-circle-logo {
+    width: 155px;
+    height: 155px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-brand-row {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-brand-copy .institution,
+  .hero-brand-copy .lead-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-circle-logo {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 /* PH.D. STUDENT DETAILS */
