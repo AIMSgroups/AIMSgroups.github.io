@@ -195,73 +195,56 @@ body {
 }
 
 
-/* AIMS LAB HERO: circular seal beside the lab name */
-.hero-brand-row {
+
+/* AIMS LAB HERO: small circular logo directly beside the lab title */
+.hero-title-row {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  max-width: 980px;
+  gap: 1.15rem;
+  margin-bottom: 0.75rem;
+  max-width: 900px;
 }
 
-.hero-circle-logo {
-  width: clamp(155px, 19vw, 210px);
-  height: clamp(155px, 19vw, 210px);
-  flex: 0 0 auto;
+.hero-title-logo {
+  width: 92px;
+  height: 92px;
+  flex: 0 0 92px;
   object-fit: contain;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
-.hero-brand-copy {
-  min-width: 0;
-  flex: 1;
+.hero-title-row .page-title {
+  margin-bottom: 0;
 }
 
-.hero-brand-copy .eyebrow {
-  margin-bottom: 0.45rem;
-}
-
-.hero-brand-copy .page-title {
-  margin-bottom: 0.7rem;
-}
-
-.hero-brand-copy .institution {
-  margin-bottom: 0.9rem;
-}
-
-.hero-brand-copy .lead-text {
-  max-width: 700px;
-}
-
-@media (max-width: 720px) {
-  .hero-brand-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-  }
-
-  .hero-circle-logo {
-    width: 155px;
-    height: 155px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-brand-row {
+@media (max-width: 640px) {
+  .hero-title-row {
+    gap: 0.8rem;
     align-items: center;
-    text-align: center;
   }
 
-  .hero-brand-copy .institution,
-  .hero-brand-copy .lead-text {
-    margin-left: auto;
-    margin-right: auto;
+  .hero-title-logo {
+    width: 68px;
+    height: 68px;
+    flex-basis: 68px;
   }
 
-  .hero-circle-logo {
-    width: 140px;
-    height: 140px;
+  .hero-title-row .page-title {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title-logo {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
+  }
+
+  .hero-title-row {
+    gap: 0.65rem;
   }
 }
 
